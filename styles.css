@@ -1,0 +1,108 @@
+/*PALETA DE COLORES- MODO OSCURO*/
+
+:root{
+    --header-color: #333333;
+    --body-color: #4d4d4d;
+    --button-color: #28a428;
+    --image-space-color: #000000;
+    --text-space-color: #ffffff;
+    --font-color: #ffffff;
+    --font-family-general:'Open Sans', sans-serif;
+    --font-family-meme-example:
+}
+
+/* GENERALIDADES */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--body-color);
+    font-family: var(--font-family-general)
+}
+
+/* HEADER */
+
+header{
+    background-color: var(--header-color);
+    text-align: center;
+    padding: 0.5rem 0rem;
+    font-size: 0.7rem;
+    justify-content: center;
+}
+
+/* BOTONES */
+
+.button{
+    background-color: var(--header-color);
+    border: none;
+    padding: 0.8%;
+    border-radius: 10px;
+    outline: none;
+}
+
+.download-button{
+    background-color: var(--button-color);
+    border: none;
+    padding: 2%;
+    border-radius: 5px;
+    outline: none;
+    margin: 4%;
+}
+
+/* PARAMETROS */
+
+.hidden{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+/* MAIN */
+main{
+    width: 90%;
+    height: 80vh;
+    margin: 5% 0%;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+}
+
+.meme-container{
+    height: 90%;
+}
+
+.meme-text{
+    display: flex;
+    background-color: #ffffff;
+    width: 100%;
+    height: 15%;
+    padding: 1%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #000000;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.meme-image{
+    background-color: #000000;
+    background-size: cover;
+    width: 100%;
+    height: 70%;
+}
+
+/* Mobile first */ 
+
+@media screen and (min-width= 480px) {
+}
