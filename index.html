@@ -12,10 +12,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1 class="title">Generador de memes</h1>
+        <h1 class="title">Generador de Memes</h1>
         <div class="menu-container">
             <button class="button">
                 <i class="fa-solid fa-image">
@@ -32,36 +33,38 @@
             </button>
         </div>
     </header>
-    <main>
-        <div class="meme-container">
-            <p class="meme-text">TOP TEXT</p>
-            <div class="meme-image"></div>
-            <p class="meme-text">BOTTOM TEXT</p>
-        </div>
-        <button class="download-button">
-            <i class="fa-solid fa-download"></i>
-            Descargar meme
-        </button>
-    </main>
-    <aside class="hidden">
-        <button>
+    <div class="main-panel">
+        <main>
+            <div class="meme-container">
+                <p class="meme-text">TOP TEXT</p>
+                <div class="meme-image"></div>
+                <p class="meme-text">BOTTOM TEXT</p>
+            </div>
+            <button class="download-button">
+                <i class="fa-solid fa-download"></i>
+                Descargar meme
+            </button>
+        </main>
+    </div>
+    <aside>
+        <button class="button">
             <i class="fa-solid fa-xmark"></i>
         </button>
-        <section>
+        <section class="image-section">
             <h2>IMAGEN</h2>
             <div>
                 <h3>URL</h3>
-                <input type="text">
+                <input class= "input" type="text">
             </div>
             <div>
                 <h3>FONDO</h3>
                 <div>
                     <div>
-                        <input type="color">
+                        <input class= "input" type="color">
                         <span>#FFFFFF</span>
                     </div>
                     <div>
-                        <select name="" id="">
+                        <select aria-label="image-mix" id="filters">
                             <option value="unset">Ninguno</option>
                             <option value="lighten">Aclarar</option>
                             <option value="darken">Oscurecer</option>
@@ -109,11 +112,11 @@
                             <input type="range" id="invert" min="0" max="1" value="0" step="0.1">
                         </div>
                     </div>
-                    <button class="button">Restablecer filtros</button>
+                    <button class="button-back">Restablecer filtros</button>
                 </div>
             </div>
         </section>
-        <section>
+        <section class="text-section">
             <h2>TEXTO</h2>
             <div>
                 <h3>SUPERIOR</h3>
