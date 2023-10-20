@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editor de memes</title>
-    <script src="script/script.js"></script>
     <link rel="stylesheet" href="styles.css">
     <meta name="description" content="Edita tus propios memes y descargalos con esta aplicación. Compartí tu creatividad">
     <script src="https://kit.fontawesome.com/937cff0016.js" crossorigin="anonymous"></script>
@@ -18,17 +17,17 @@
     <header>
         <h1 class="title">Generador de Memes</h1>
         <div class="menu-container">
-            <button class="button">
+            <button class="open-image-menu">
                 <i class="fa-solid fa-image">
                 </i>
                 Imagen
             </button>
-            <button class="button">
+            <button class="open-text-menu">
                 <i class="fa-solid fa-font"></i>
                 Texto
             </button>
-            <button class="button"> 
-                <i class="fa-solid fa-circle-half-stroke"></i>
+            <button class="change-color-theme"> 
+                <i class="fa-solid fa-circle-half-stroke" id="mode"></i>
                 Modo Oscuro
             </button>
         </div>
@@ -36,9 +35,9 @@
     <div class="main-panel">
         <main>
             <div class="meme-container">
-                <p class="meme-text">TOP TEXT</p>
+                <p class="meme-top-text">TOP TEXT</p>
                 <div class="meme-image"></div>
-                <p class="meme-text">BOTTOM TEXT</p>
+                <p class="meme-bottom-text">BOTTOM TEXT</p>
             </div>
             <button class="download-button">
                 <i class="fa-solid fa-download"></i>
@@ -47,20 +46,20 @@
         </main>
     </div>
     <aside>
-        <button class="button">
+        <button class="close-menu">
             <i class="fa-solid fa-xmark"></i>
         </button>
         <section class="image-section">
             <h2>IMAGEN</h2>
             <div>
                 <h3>URL</h3>
-                <input class= "input" type="text">
+                <input type="text" name="url" id="url">
             </div>
             <div>
                 <h3>FONDO</h3>
                 <div>
                     <div>
-                        <input class= "input" type="color">
+                        <input class= "input-color" type="color">
                         <span>#FFFFFF</span>
                     </div>
                     <div>
@@ -112,7 +111,7 @@
                             <input type="range" id="invert" min="0" max="1" value="0" step="0.1">
                         </div>
                     </div>
-                    <button class="button-back">Restablecer filtros</button>
+                    <button class="button-reset">Restablecer filtros</button>
                 </div>
             </div>
         </section>
@@ -120,7 +119,7 @@
             <h2>TEXTO</h2>
             <div>
                 <h3>SUPERIOR</h3>
-                <textarea name="" id="">TOP TEXT</textarea>
+                <textarea name="" id="top-text-input">TOP TEXT</textarea>
                 <div>
                     <input type="checkbox" id="no-top-text">
                     <label for="no-top-text">Sin texto superior</label>
@@ -128,7 +127,7 @@
             </div>
             <div>
                 <h3>INFERIOR</h3>
-                <textarea name="" id="">BOTTOM TEXT</textarea>
+                <textarea name="" id="bottom-text-input">BOTTOM TEXT</textarea>
                 <div>
                     <input type="checkbox" id="no-bottom-text">
                     <label for="no-bottom-text">Sin texto inferior</label>
@@ -151,13 +150,13 @@
                     <input type="number" name="font-size" min="12" value="40">
                     <div>
                         <button>
-                            <i class="fa-solid fa-align-left"></i>
+                            <i class="fa-solid fa-align-left" id="alineacion"></i>
                         </button>
                         <button>
-                            <i class="fa-solid fa-align-center"></i>
+                            <i class="fa-solid fa-align-center" id="alineacion"></i>
                         </button>
                         <button>
-                            <i class="fa-solid fa-align-right"></i>
+                            <i class="fa-solid fa-align-right" id="alineacion"></i>
                         </button>
                     </div>
                 </div>
@@ -187,9 +186,9 @@
             <div>
                 <h3>CONTORNO</h3>
                 <div>
-                    <button>Ninguno</button>
-                    <button>Claro</button>
-                    <button>Oscuro</button>
+                    <button class="contour">Ninguno</button>
+                    <button class="contour">Claro</button>
+                    <button class="contour">Oscuro</button>
                 </div>
             </div>
             <div>
@@ -209,5 +208,6 @@
             </div>
         </section>
     </aside>
+    <script src="script/script.js"></script>
 </body>
 </html>

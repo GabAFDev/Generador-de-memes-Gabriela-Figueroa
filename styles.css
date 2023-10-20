@@ -12,6 +12,18 @@
     --font-family-meme: 'Impact', sans-serif;
 }
 
+/*PALETA DE COLORES- MODO CLARO*/
+
+[theme="light-theme"] {
+    --header-color: #e0e0e0;
+    --body-color: #eeeeee;
+    --panel-color: #fafafa;
+    --button-color: #28a428;
+    --image-space-color: #000000;
+    --text-space-color: #ffffff;
+    --font-color: #424242;
+}
+
 /* GENERALIDADES */
 *{
     margin: 0;
@@ -56,7 +68,7 @@ main {
     width: 85%;
 }
 
-.meme-text{
+.meme-top-text , .meme-bottom-text{
     display: flex;
     background-color: #ffffff;
     width: 100%;
@@ -71,16 +83,20 @@ main {
     font-size: 1.5rem;
 }
 
+
+
 .meme-image{
     background-color: #000000;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
     height: 280px;
 }
 
 /* BOTONES */
 
-.button{
+.button, .open-image-menu , .open-text-menu , .close-menu , .change-color-theme , .button-reset{
     background-color: var(--header-color);
     border: none;
     padding: 0.8%;
@@ -98,7 +114,12 @@ main {
     margin: 2%;
 }
 
-/* PARAMETROS */
+.button-reset{
+    padding: 2.5%;
+    border-radius: 5px;
+}
+
+/* PANEL */
 
 aside{
     display: none;
@@ -121,7 +142,15 @@ input[type='range']{
     width: 100%;
     height: 5px;
     margin-top: 12px;
+    color: var(--font-color)
 }
+
+input[type='text'] , #top-text-input, #bottom-text-input ,#font-family-selection , input[type='number'] , #alineacion , input[type='color'] , #line-height , .contour , #filters {
+    background-color: var(--body-color);
+    border-radius: 5px;
+    color: var(--font-color);
+}
+
 /* MEDIA QUERIES */ 
 
 @media (min-width: 481px) and (max-width: 768px){
