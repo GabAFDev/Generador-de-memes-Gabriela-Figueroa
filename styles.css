@@ -269,8 +269,14 @@ span{
 
 /* FOCUS */
 
-#button-align:focus , input[type='text']:focus , #top-text-input:focus , #bottom-text-input:focus , #font-family-selection:focus , input[type='number']:focus , #align-left:focus , #align-center:focus , #align-right:focus , #line-height:focus , input[type='color']:focus , .contour-none:focus , .contour-light:focus , .contour-dark:focus , #filters:focus , input[type="checkbox"]:focus , #font-color-options:focus  , #background-color-options:focus ,#background-text-color-options:focus , #align-left:focus , #align-center:focus , #align-right:focus{
+#button-align:focus , input[type='text']:focus , #top-text-input:focus , #bottom-text-input:focus , #font-family-selection:focus , input[type='number']:focus , #align-left:focus , #align-center:focus , #align-right:focus , #line-height:focus , input[type='color']:focus , .contour-none:focus , .contour-light:focus , .contour-dark:focus , #filters:focus , input[type="checkbox"]:focus , #font-color-options:focus  , #background-color-options:focus ,#background-text-color-options:focus , #align-left:focus , #align-center:focus , #align-right:focus , input[type="range"]:focus{
     background-color: var(--hover-color);
+}
+
+/* ACTIVE */
+
+input[type="range"]:active {
+	cursor: grabbing;
 }
 
 /* MEDIA QUERIES */ 
