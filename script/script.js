@@ -2,7 +2,7 @@
 
 const $ = (selector) => document.querySelector(selector)
 
-// ----- Show image menu ----- //
+//Show image menu
 
 $(".open-image-menu").addEventListener("click" , () => {
     $("aside").style.display = "block"
@@ -10,7 +10,7 @@ $(".open-image-menu").addEventListener("click" , () => {
     $(".text-section").style.display = "none"
 })
 
-// ----- Show text menu ----- //
+//Show text menu
 
 $(".open-text-menu").addEventListener("click" , () => {
     $("aside").style.display = "block"
@@ -18,13 +18,13 @@ $(".open-text-menu").addEventListener("click" , () => {
     $(".image-section").style.display = "none"
 })
 
-// ----- Hide sidebar ----- //
+//Hide sidebar
 
 $(".close-menu").addEventListener("click" , () => {
     $("aside").style.display = "none"
 })
 
-// ----- light-mode ----- //
+//light-mode
 
 $(".change-color-theme").addEventListener("click" , () => {
     const currentTheme = $("body").getAttribute("theme")
@@ -33,18 +33,6 @@ $(".change-color-theme").addEventListener("click" , () => {
     } else {
         $("body").setAttribute("theme" , "light-theme")
     }
-})
-
-// ----- Enter top text ----- //
-
-$("#top-text-input").addEventListener("input" , (e) => {
-    $(".meme-top-text").innerText = `${e.target.value}`
-})
-
-// ----- Enter bottom text ----- //
-
-$("#bottom-text-input").addEventListener("input" , (e) => {
-    $(".meme-bottom-text").innerText = `${e.target.value}`
 })
 
 // ----- Image panel ----- //
@@ -97,4 +85,162 @@ $(".button-reset").addEventListener("click" , (e) => {
     $("#saturate").value = "100"
     $("#invert").value = "0"
     $(".meme-image").style.filter = "none"
+})
+
+// ----- Image panel ----- //
+
+//Enter top text
+
+$("#top-text-input").addEventListener("input" , (e) => {
+    $(".meme-top-text").innerText = `${e.target.value}`
+})
+
+$("#no-top-text").addEventListener("input" , (e) => {
+    if (e.target.checked) {
+        $(".meme-top-text").style.display = "none"
+    } else {
+        $(".meme-top-text").style.display = "block"
+    }
+})
+
+//Enter bottom text
+
+$("#bottom-text-input").addEventListener("input" , (e) => {
+    $(".meme-bottom-text").innerText = `${e.target.value}`
+})
+
+$("#no-bottom-text").addEventListener("input" , (e) => {
+    if (e.target.checked) {
+        $(".meme-bottom-text").style.display = "none"
+    } else {
+        $(".meme-bottom-text").style.display = "block"
+    }
+})
+
+//Change font
+
+$("#font-family-selection").addEventListener("input" , (e) => {
+    $(".meme-top-text").style.fontFamily = e.target.value
+})
+
+$("#font-family-selection").addEventListener("input" , (e) => {
+    $(".meme-bottom-text").style.fontFamily = e.target.value
+})
+
+//Change font size
+
+$("#font-size-selector").addEventListener ("input" , (e) => {
+    $(".meme-top-text").style.fontSize = `${e.target.value}px`
+})
+
+$("#font-size-selector").addEventListener ("input" , (e) => {
+    $(".meme-bottom-text").style.fontSize = `${e.target.value}px`
+})
+
+//Change text align 
+
+$("#align-left").addEventListener ("click" , () => {
+    $(".meme-top-text").style.justifyContent = "left"
+})
+
+$("#align-center").addEventListener ("click" , () => {
+    $(".meme-top-text").style.justifyContent = "center"
+})
+
+$("#align-right").addEventListener ("click" , () => {
+    $(".meme-top-text").style.justifyContent = "right"
+})
+
+$("#align-left").addEventListener ("click" , () => {
+    $(".meme-bottom-text").style.justifyContent = "left"
+})
+
+$("#align-center").addEventListener ("click" , () => {
+    $(".meme-bottom-text").style.justifyContent = "center"
+})
+
+$("#align-right").addEventListener ("click" , () => {
+    $(".meme-bottom-text").style.justifyContent = "right"
+})
+
+//Change text color 
+
+$("#text-color-input").addEventListener("input", (e) => {
+    $(".meme-top-text").style.color = e.target.value
+})
+
+$("#text-color-input").addEventListener("input", (e) => {
+    $(".meme-bottom-text").style.color = e.target.value
+})
+
+//Change text background color 
+
+$("#back-color-input").addEventListener("input", (e) => {
+    $(".meme-top-text").style.backgroundColor = e.target.value
+})
+
+$("#back-color-input").addEventListener("input", (e) => {
+    $(".meme-bottom-text").style.backgroundColor = e.target.value
+})
+
+$("#no-back-check").addEventListener("input" , (e) => {
+    if (e.target.checked) {
+        $(".meme-top-text").style.backgroundColor = "transparent"
+    } else {
+        $(".meme-top-text").style.backgroundColor = "#ffffff"
+    }
+})
+
+$("#no-back-check").addEventListener("input" , (e) => {
+    if (e.target.checked) {
+        $(".meme-bottom-text").style.backgroundColor = "transparent"
+    } else {
+        $(".meme-bottom-text").style.backgroundColor = "#ffffff"
+    }
+})
+
+//Change contour
+
+$(".contour-none").addEventListener ("click" , () => {
+    $(".meme-top-text").style.textShadow = "none"
+})
+
+$(".contour-light").addEventListener ("click" , () => {
+    $(".meme-top-text").style.textShadow = "#ffffff 2px 2px"
+})
+
+$(".contour-dark").addEventListener ("click" , () => {
+    $(".meme-top-text").style.textShadow = "#000000 2px 2px"
+})
+
+$(".contour-none").addEventListener ("click" , () => {
+    $(".meme-bottom-text").style.textShadow = "none"
+})
+
+$(".contour-light").addEventListener ("click" , () => {
+    $(".meme-bottom-text").style.textShadow = "#ffffff 2px 2px"
+})
+
+$(".contour-dark").addEventListener ("click" , () => {
+    $(".meme-bottom-text").style.textShadow = "#000000 2px 2px"
+})
+
+//Change space between text
+
+$("#space-between").addEventListener ("input" , (e) => {
+    $(".meme-top-text").style.padding = `${e.target.value}px 50px`
+})
+
+$("#space-between").addEventListener ("input" , (e) => {
+    $(".meme-bottom-text").style.padding = `${e.target.value}px 50px`
+})
+
+//Change line height
+
+$("#line-height").addEventListener("input" , (e) => {
+    $(".meme-top-text").style.lineHeight = e.target.value
+})
+
+$("#line-height").addEventListener("input" , (e) => {
+    $(".meme-bottom-text").style.lineHeight = e.target.value
 })
