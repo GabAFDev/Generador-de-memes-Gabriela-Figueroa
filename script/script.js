@@ -49,6 +49,9 @@ $(".input-color").addEventListener("input", (e) => {
     $(".meme-image").style.backgroundColor = e.target.value
 })
 
+$(".input-color").addEventListener("input", (e) => {
+    $("#input-color-value").innerText = e.target.value
+})
 
 //Background Blend
 
@@ -173,6 +176,10 @@ $("#text-color-input").addEventListener("input", (e) => {
     $(".meme-bottom-text").style.color = e.target.value
 })
 
+$("#text-color-input").addEventListener("input", (e) => {
+    $("#text-color").innerText = e.target.value
+})
+
 //Change text background color 
 
 $("#back-color-input").addEventListener("input", (e) => {
@@ -181,6 +188,10 @@ $("#back-color-input").addEventListener("input", (e) => {
 
 $("#back-color-input").addEventListener("input", (e) => {
     $(".meme-bottom-text").style.backgroundColor = e.target.value
+})
+
+$("#background-text-color-options").addEventListener("input", (e) => {
+    $("#text-back-color").innerText = e.target.value
 })
 
 $("#no-back-check").addEventListener("input" , (e) => {
