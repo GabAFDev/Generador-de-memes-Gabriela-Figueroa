@@ -253,6 +253,10 @@ input[type='color']{
     width: 10px;
 }
 
+span{
+    font-size: 0.8rem;
+}
+
 /* HOVERS */
 
 .open-image-menu:hover , .open-text-menu:hover , .close-menu:hover , .change-color-theme:hover , .button-reset:hover , #button-align:hover, input[type='text']:hover , #top-text-input:hover , #bottom-text-input:hover , #font-family-selection:hover , input[type='number']:hover , #align-left:hover , #align-center:hover , #align-right:hover , #line-height:hover , input[type='color']:hover , .contour-none:hover , .contour-light:hover , .contour-dark:hover , #filters:hover , input[type="checkbox"]:hover , #font-color-options:hover  , #background-color-options:hover ,#background-text-color-options:hover, #align-left:hover , #align-center:hover , #align-right:hover{
