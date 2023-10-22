@@ -155,16 +155,7 @@ input[type='range']{
     color: var(--font-color)
 }
 
-input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    height: 13px;
-    width: 13px;
-    border-radius: 50%;
-    background: var(--text-space-color);
-    cursor: pointer;
-}
-
-input[type='text'] , #top-text-input, #bottom-text-input ,#font-family-selection , input[type='number'] , #align-left , #align-center , #align-right , input[type='color'] , #line-height , .contour-none , .contour-light , .contour-dark , #filters , input[type="checkbox"]{
+input[type='text'] , #top-text-input, #bottom-text-input ,#font-family-selection , input[type='number'] , #align-left , #align-center , #align-right , #line-height , input[type='color'] , .contour-none , .contour-light , .contour-dark , #filters , input[type="checkbox"] , #font-color-options , #background-color-options ,#background-text-color-options{
     background-color: var(--body-color);
     border-radius: 3px;
     color: var(--font-color);
@@ -174,9 +165,22 @@ input[type='text'] , #top-text-input, #bottom-text-input ,#font-family-selection
     padding: 1.5%;
 }
 
-input[type='text'] , textarea , #font-family-selection , #space-between , #line-height{
+input[type='text'] , textarea , #font-family-selection , #space-between , #line-height {
     width: 96%;
     height: 23px;
+}
+
+#filters{
+    height: 27px;
+}
+
+input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background: var(--text-space-color);
+    cursor: pointer;
 }
 
 /* ASIDE TITLES */
@@ -205,7 +209,7 @@ label{
     align-items: center;
 }
 
-#font-size-selector , #text-align-options , #background-color-options , #background-filters-options ,#font-color-options-for-texts , #background-color-options-for-texts{
+#font-size-selector , #text-align-options ,#font-color-options-for-texts , #background-color-options-for-texts , #background-filters-options , #background-color-options{
     width: 50%;
 }
 
@@ -221,6 +225,15 @@ label{
 
 .contour-none ,  .contour-light , .contour-dark {
     padding: 3%;
+}
+
+/* INPUTS COLOR */
+
+input[type='color'] {
+    height: 20px;
+    width: 20px;
+    padding: 0px;
+    margin: 0px;
 }
 
 /* MEDIA QUERIES */ 
