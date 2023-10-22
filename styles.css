@@ -59,6 +59,11 @@ header{
 }
 
 /* MAIN */
+
+main {
+    width: 85%;
+}
+
 .main-panel{
     display: flex;
     flex-grow: 1;
@@ -68,9 +73,7 @@ header{
     text-align: center;
 }
 
-main {
-    width: 85%;
-}
+/* MEME TEXTS */
 
 .meme-top-text , .meme-bottom-text{
     display: flex;
@@ -87,6 +90,8 @@ main {
     font-size: 1.5rem;
 }
 
+/* MEME */
+
 .meme-image{
     background-color: #000000;
     background-size: cover;
@@ -96,7 +101,7 @@ main {
     height: 280px;
 }
 
-/* BOTONES */
+/* BUTTONS */
 
 .open-image-menu , .open-text-menu , .close-menu , .change-color-theme , .button-reset , #button-align{
     background-color: var(--header-color);
@@ -148,6 +153,8 @@ aside{
     background-color: var(--panel-color);
     font-size: 0.5rem;
 }
+
+/* INPUTS */
 
 input[type='range']{
     background-color: var(--body-color);
@@ -233,11 +240,17 @@ label{
 
 /* INPUTS COLOR */
 
-input[type='color'] {
+input[type='color']{
     height: 20px;
     width: 20px;
     padding: 0px;
     margin: 0px;
+}
+
+#text-color-input::-webkit-color-swatch , #back-color-input::-webkit-color-swatch , .input-color::-webkit-color-swatch{
+    border-radius: 50%;
+    height: 12px;
+    width: 10px;
 }
 
 /* HOVERS */
@@ -249,6 +262,7 @@ input[type='color'] {
 .download-button:hover{
     background-color: var(--hover-color-download)
 }
+
 /* MEDIA QUERIES */ 
 
 @media (min-width: 481px) and (max-width: 768px){
