@@ -83,8 +83,6 @@ main {
     font-size: 1.5rem;
 }
 
-
-
 .meme-image{
     background-color: #000000;
     background-size: cover;
@@ -117,9 +115,8 @@ main {
 .button-reset{
     padding: 2.5%;
     border-radius: 5px;
-    width: 50%;
-    align-self: center;
-    margin-top: 6%;
+    width: 60%;
+    margin: 6% 2%;
 }
 
 .close-menu{
@@ -132,12 +129,12 @@ main {
     margin-top: 1.1%;
 }
 
-/* PANEL */
+/* ASIDE PANEL */
 
 aside{
     display: none;
-    width: 230px;
-    height: 100%;
+    width: 35vw;
+    height: 100vh;
     overflow: auto;
     position: fixed;
     top: 0;
@@ -167,13 +164,7 @@ input[type=range]::-webkit-slider-thumb {
     cursor: pointer;
 }
 
-#background-options{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-input[type='text'] , #top-text-input, #bottom-text-input ,#font-family-selection , input[type='number'] , #align-left , #align-center , #align-right , input[type='color'] , #line-height , .contour-none , .contour-light , .contour-dark , #filters {
+input[type='text'] , #top-text-input, #bottom-text-input ,#font-family-selection , input[type='number'] , #align-left , #align-center , #align-right , input[type='color'] , #line-height , .contour-none , .contour-light , .contour-dark , #filters , input[type="checkbox"]{
     background-color: var(--body-color);
     border-radius: 3px;
     color: var(--font-color);
@@ -188,6 +179,8 @@ input[type='text'] , textarea , #font-family-selection , #space-between , #line-
     height: 23px;
 }
 
+/* ASIDE TITLES */
+
 h2 {
     text-align: center;
     margin: 2%;
@@ -195,13 +188,39 @@ h2 {
 }
 
 h3{
-    margin: 0.5%;
+    margin: 2%;
     font-size: 0.8rem;
 }
 
 label{
-    margin: 0.2%;
+    margin: 2%;
     font-size: 0.6rem;
+}
+
+/* ASIDE COLUMN DISPLAY */
+
+#font-options , #color-options-for-texts , #background-options{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+#font-size-selector , #text-align-options , #background-color-options , #background-filters-options ,#font-color-options-for-texts , #background-color-options-for-texts{
+    width: 50%;
+}
+
+/* BUTTON OPTIONS */
+
+#align-left , #align-center , #align-right{
+    height: 21px;
+    text-align: center;
+    padding: 3%;
+    width: 25%;
+    margin: 3.5%;
+}
+
+.contour-none ,  .contour-light , .contour-dark {
+    padding: 3%;
 }
 
 /* MEDIA QUERIES */ 
