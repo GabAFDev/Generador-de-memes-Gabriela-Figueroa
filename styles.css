@@ -188,6 +188,9 @@ input[type='text'] , #top-text-input, #bottom-text-input ,#font-family-selection
         display: block;
         width: 15vw;
     }
+    .close-menu{
+        display: none;
+    }
     .main-panel{
         width: 45%;
     }
