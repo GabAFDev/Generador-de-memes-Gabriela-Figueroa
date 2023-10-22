@@ -10,6 +10,7 @@
     --font-color: #ffffff;
     --font-family-general:'Open Sans', sans-serif;
     --font-family-meme: 'Impact', sans-serif;
+    --hover-color: #4e5565;
 }
 
 /*PALETA DE COLORES- MODO CLARO*/
@@ -22,6 +23,7 @@
     --image-space-color: #000000;
     --text-space-color: #424242;
     --font-color: #424242;
+    --hover-color: #bdbdbd;
 }
 
 /* GENERALIDADES */
@@ -94,7 +96,7 @@ main {
 
 /* BOTONES */
 
-.button, .open-image-menu , .open-text-menu , .close-menu , .change-color-theme , .button-reset , #button-align{
+.open-image-menu , .open-text-menu , .close-menu , .change-color-theme , .button-reset , #button-align{
     background-color: var(--header-color);
     border: none;
     padding: 0.9%;
@@ -236,6 +238,11 @@ input[type='color'] {
     margin: 0px;
 }
 
+/* HOVERS */
+
+.open-image-menu:hover , .open-text-menu:hover , .close-menu:hover , .change-color-theme:hover , .button-reset:hover , #button-align:hover, input[type='text']:hover , #top-text-input:hover , #bottom-text-input:hover , #font-family-selection:hover , input[type='number']:hover , #align-left:hover , #align-center:hover , #align-right:hover , #line-height:hover , input[type='color']:hover , .contour-none:hover , .contour-light:hover , .contour-dark:hover , #filters:hover , input[type="checkbox"]:hover , #font-color-options:hover  , #background-color-options:hover ,#background-text-color-options:hover, #align-left:hover , #align-center:hover , #align-right:hover{
+    background-color: var(--hover-color);
+}
 /* MEDIA QUERIES */ 
 
 @media (min-width: 481px) and (max-width: 768px){
