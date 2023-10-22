@@ -11,6 +11,7 @@
     --font-family-general:'Open Sans', sans-serif;
     --font-family-meme: 'Impact', sans-serif;
     --hover-color: #4e5565;
+    --hover-color-download: #328032;
 }
 
 /*PALETA DE COLORES- MODO CLARO*/
@@ -24,6 +25,7 @@
     --text-space-color: #424242;
     --font-color: #424242;
     --hover-color: #bdbdbd;
+    --hover-color-download: #328032;
 }
 
 /* GENERALIDADES */
@@ -242,6 +244,10 @@ input[type='color'] {
 
 .open-image-menu:hover , .open-text-menu:hover , .close-menu:hover , .change-color-theme:hover , .button-reset:hover , #button-align:hover, input[type='text']:hover , #top-text-input:hover , #bottom-text-input:hover , #font-family-selection:hover , input[type='number']:hover , #align-left:hover , #align-center:hover , #align-right:hover , #line-height:hover , input[type='color']:hover , .contour-none:hover , .contour-light:hover , .contour-dark:hover , #filters:hover , input[type="checkbox"]:hover , #font-color-options:hover  , #background-color-options:hover ,#background-text-color-options:hover, #align-left:hover , #align-center:hover , #align-right:hover{
     background-color: var(--hover-color);
+}
+
+.download-button:hover{
+    background-color: var(--hover-color-download)
 }
 /* MEDIA QUERIES */ 
 
