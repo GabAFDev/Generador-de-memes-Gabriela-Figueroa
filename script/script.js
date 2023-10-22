@@ -87,7 +87,7 @@ $(".button-reset").addEventListener("click" , (e) => {
     $(".meme-image").style.filter = "none"
 })
 
-// ----- Image panel ----- //
+// ----- Text panel ----- //
 
 //Enter top text
 
@@ -244,3 +244,13 @@ $("#line-height").addEventListener("input" , (e) => {
 $("#line-height").addEventListener("input" , (e) => {
     $(".meme-bottom-text").style.lineHeight = e.target.value
 })
+
+// ----- Download button ----- //
+
+const downloadMeme = () => {
+    domtoimage.toBlob($(".meme-container")).then((blob) => {
+        saveAs(blob , "my-meme.png")
+    })
+}
+
+$("#download-button").addEventListener("click", downloadMeme)
