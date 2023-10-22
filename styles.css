@@ -96,12 +96,12 @@ main {
 
 /* BOTONES */
 
-.button, .open-image-menu , .open-text-menu , .close-menu , .change-color-theme , .button-reset{
+.button, .open-image-menu , .open-text-menu , .close-menu , .change-color-theme , .button-reset , #button-align{
     background-color: var(--header-color);
     border: none;
-    padding: 0.8%;
+    padding: 0.9%;
     margin: 0.5%;
-    border-radius: 10px;
+    border-radius: 5px;
     outline: none;
 }
 
@@ -125,7 +125,7 @@ main {
 
 aside{
     display: none;
-    width: 270px;
+    width: 230px;
     height: 100%;
     overflow: auto;
     position: fixed;
@@ -164,7 +164,7 @@ input[type=range]::-webkit-slider-thumb {
 
 input[type='text'] , #top-text-input, #bottom-text-input ,#font-family-selection , input[type='number'] , #align-left , #align-center , #align-right , input[type='color'] , #line-height , .contour-none , .contour-light , .contour-dark , #filters {
     background-color: var(--body-color);
-    border-radius: 5px;
+    border-radius: 3px;
     color: var(--font-color);
     outline: none;
     border: none;
@@ -172,8 +172,9 @@ input[type='text'] , #top-text-input, #bottom-text-input ,#font-family-selection
     padding: 1.5%;
 }
 
-input[type='text'] , textarea {
+input[type='text'] , textarea , #font-family-selection , #space-between , #line-height{
     width: 96%;
+    height: 23px;
 }
 
 h2 {
