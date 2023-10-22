@@ -117,13 +117,15 @@ main {
 .button-reset{
     padding: 2.5%;
     border-radius: 5px;
+    width: 50%;
+    align-self: center;
 }
 
 /* PANEL */
 
 aside{
     display: none;
-    width: 260px;
+    width: 270px;
     height: 100%;
     overflow: auto;
     position: fixed;
@@ -147,11 +149,17 @@ input[type='range']{
 
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    height: 15px;
-    width: 15px;
+    height: 13px;
+    width: 13px;
     border-radius: 50%;
-    background: var(--header-color);
+    background: var(--text-space-color);
     cursor: pointer;
+}
+
+#background-options{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 input[type='text'] , #top-text-input, #bottom-text-input ,#font-family-selection , input[type='number'] , #align-left , #align-center , #align-right , input[type='color'] , #line-height , .contour-none , .contour-light , .contour-dark , #filters {
@@ -160,8 +168,12 @@ input[type='text'] , #top-text-input, #bottom-text-input ,#font-family-selection
     color: var(--font-color);
     outline: none;
     border: none;
-    margin: 2% 1% 2% 1%;
-    padding: 2%;
+    margin: 2%;
+    padding: 1.5%;
+}
+
+input[type='text'] , textarea {
+    width: 96%;
 }
 
 h2 {
