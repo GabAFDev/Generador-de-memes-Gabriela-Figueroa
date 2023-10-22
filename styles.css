@@ -155,6 +155,22 @@ input[type='text'] , #top-text-input, #bottom-text-input ,#font-family-selection
     padding: 2%;
 }
 
+h2 {
+    text-align: center;
+    margin: 2%;
+    font-size: 1.2rem;
+}
+
+h3{
+    margin: 0.5%;
+    font-size: 0.8rem;
+}
+
+label{
+    margin: 0.2%;
+    font-size: 0.6rem;
+}
+
 /* MEDIA QUERIES */ 
 
 @media (min-width: 481px) and (max-width: 768px){
