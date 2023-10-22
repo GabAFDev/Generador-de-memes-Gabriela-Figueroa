@@ -33,6 +33,13 @@ $(".change-color-theme").addEventListener("click" , () => {
     } else {
         $("body").setAttribute("theme" , "light-theme")
     }
+    if (currentTheme === "light-theme") {
+        $(".change-color-theme").innerHTML = `<i class="fa-solid fa-circle-half-stroke" id="mode"></i>
+        Modo Claro`
+    } else {
+        $(".change-color-theme").innerHTML = `<i class="fa-solid fa-circle-half-stroke" id="mode"></i>
+        Modo Oscuro`
+    }
 })
 
 // ----- Image panel ----- //
