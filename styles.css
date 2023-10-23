@@ -92,13 +92,19 @@ main {
 
 /* MEME */
 
-.meme-image{
+.meme-container{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
     background-color: #000000;
+}
+
+.meme-image{
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 280px;
+    height: 100%;
 }
 
 /* BUTTONS */
