@@ -22,7 +22,7 @@
     --panel-color: #fafafa;
     --button-color: #28a428;
     --image-space-color: #000000;
-    --text-space-color: #424242;
+    --text-space-color: #ffffff;
     --font-color: #000000;
     --hover-color: #bdbdbd;
     --hover-color-download: #328032;
@@ -61,7 +61,11 @@ header{
 /* MAIN */
 
 main {
+    display: flex;
+    flex-direction: column;
     width: 85%;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-panel{
@@ -69,23 +73,21 @@ main {
     flex-grow: 1;
     width: 100%;
     justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 /* MEME TEXTS */
 
 .meme-top-text , .meme-bottom-text{
     display: flex;
-    background-color: #ffffff;
+    background-color: var(--text-space-color);
     width: 100%;
-    height: 15%;
+    height: 25%;
     padding: 2.5%;
     align-items: center;
     text-align: center;
     justify-content: center;
     font-family: var(--font-family-meme);
-    color: #000000;
+    color: var(--image-space-color);
     font-weight: bolder;
     font-size: 1.5rem;
 }
@@ -94,13 +96,14 @@ main {
 
 .meme-container{
     height: 400px;
+    width: 80%;
     display: flex;
     flex-direction: column;
-    background-color: #000000;
+    background-color: var(--image-space-color);
 }
 
 .meme-image{
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
@@ -310,7 +313,7 @@ input[type="range"]:active {
     }
 }
 
-@media (min-width: 1280px) and (max-width: 2500px){
+@media (min-width: 1280px) and (max-width: 4500px){
     header main{
         width: 85vw;
     }
