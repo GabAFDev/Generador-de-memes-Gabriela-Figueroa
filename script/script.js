@@ -53,7 +53,7 @@ $("#url").addEventListener("input" , (e) => {
 //Background Color
 
 $(".input-color").addEventListener("input", (e) => {
-    $(".meme-container").style.backgroundColor = e.target.value
+    $(".meme-image").style.backgroundColor = e.target.value
 })
 
 $(".input-color").addEventListener("input", (e) => {
