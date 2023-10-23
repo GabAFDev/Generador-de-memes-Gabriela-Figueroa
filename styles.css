@@ -94,7 +94,7 @@ main {
 
 .meme-image{
     background-color: #000000;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
