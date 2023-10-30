@@ -60,14 +60,14 @@ header{
 
 /* MAIN */
 
-.main-panel{
+main{
     display: flex;
     flex-grow: 1;
     width: 100%;
     justify-content: center;
 }
 
-main {
+.main-panel {
     display: flex;
     flex-direction: column;
     width: 85%;
@@ -78,7 +78,7 @@ main {
 /* MEME TEXTS */
 
 .meme-top-text , .meme-bottom-text{
-    display: flex;
+
     background: var(--text-space-color);
     width: 100%;
     padding: 2.5%;
@@ -95,8 +95,6 @@ main {
 
 .meme-container{
     width: 80%;
-    display: flex;
-    flex-direction: column;
 }
 
 .meme-image{

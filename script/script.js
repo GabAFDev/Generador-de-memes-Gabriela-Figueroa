@@ -116,7 +116,7 @@ const changeFontSize = (selector , size) => $(selector).style.fontSize = `${size
 
 //Change text align 
 
-const changeTextAlign = (selector , alignment) => $(selector).style.justifyContent = alignment
+const changeTextAlign = (selector , alignment) => $(selector).style.textAlign = alignment
 
 //Change text color 
 
