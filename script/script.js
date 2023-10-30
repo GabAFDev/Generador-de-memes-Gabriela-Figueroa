@@ -30,7 +30,9 @@ const hideAsideMenu = () => {
 
 // Change theme
 
-$(".change-color-theme").addEventListener("click" , () => {
+
+const changeTheme = () =>{
+    
     const currentTheme = $("body").getAttribute("theme")
     if (currentTheme) {
         $("body").removeAttribute("theme" , "light-theme")
@@ -44,7 +46,8 @@ $(".change-color-theme").addEventListener("click" , () => {
         $(".change-color-theme").innerHTML = `<i class="fa-solid fa-circle-half-stroke" id="mode"></i>
         Modo Oscuro`
     }
-})
+
+}
 
 // ----- Image panel ----- //
 
@@ -87,173 +90,59 @@ const resetFilters = () => {
     $(".meme-image").style.filter = "none"
 }
 
-$(".button-reset").addEventListener("click" , resetFilters)
-
 // ----- Text panel ----- //
 
-//Enter top text
+//Enter text
 
-$("#top-text-input").addEventListener("input" , (e) => {
-    $(".meme-top-text").innerText = `${e.target.value}`
-})
+const enterMemeText = (selector , text) => $(selector).innerText = `${text}`
 
-$("#no-top-text").addEventListener("input" , (e) => {
-    if (e.target.checked) {
-        $(".meme-top-text").style.display = "none"
+// Text checked
+
+const hideMemeText = (selector , evento) => {
+    if (evento) {
+        $(selector).style.display = "none"
     } else {
-        $(".meme-top-text").style.display = "block"
+        $(selector).style.display = "block"
     }
-})
-
-//Enter bottom text
-
-$("#bottom-text-input").addEventListener("input" , (e) => {
-    $(".meme-bottom-text").innerText = `${e.target.value}`
-})
-
-$("#no-bottom-text").addEventListener("input" , (e) => {
-    if (e.target.checked) {
-        $(".meme-bottom-text").style.display = "none"
-    } else {
-        $(".meme-bottom-text").style.display = "block"
-    }
-})
+}
 
 //Change font
 
-$("#font-family-selection").addEventListener("input" , (e) => {
-    $(".meme-top-text").style.fontFamily = e.target.value
-})
-
-$("#font-family-selection").addEventListener("input" , (e) => {
-    $(".meme-bottom-text").style.fontFamily = e.target.value
-})
+const changeFontFamily = (selector , font) => $(selector).style.fontFamily = font
 
 //Change font size
 
-$("#font-size-selector").addEventListener ("input" , (e) => {
-    $(".meme-top-text").style.fontSize = `${e.target.value}px`
-})
-
-$("#font-size-selector").addEventListener ("input" , (e) => {
-    $(".meme-bottom-text").style.fontSize = `${e.target.value}px`
-})
+const changeFontSize = (selector , size) => $(selector).style.fontSize = `${size}px`
 
 //Change text align 
 
-$("#align-left").addEventListener ("click" , () => {
-    $(".meme-top-text").style.justifyContent = "left"
-})
-
-$("#align-center").addEventListener ("click" , () => {
-    $(".meme-top-text").style.justifyContent = "center"
-})
-
-$("#align-right").addEventListener ("click" , () => {
-    $(".meme-top-text").style.justifyContent = "right"
-})
-
-$("#align-left").addEventListener ("click" , () => {
-    $(".meme-bottom-text").style.justifyContent = "left"
-})
-
-$("#align-center").addEventListener ("click" , () => {
-    $(".meme-bottom-text").style.justifyContent = "center"
-})
-
-$("#align-right").addEventListener ("click" , () => {
-    $(".meme-bottom-text").style.justifyContent = "right"
-})
+const changeTextAlign = (selector , alignment) => $(selector).style.justifyContent = alignment
 
 //Change text color 
 
-$("#text-color-input").addEventListener("input", (e) => {
-    $(".meme-top-text").style.color = e.target.value
-})
+const changeColor = (selector , color) => $(selector).style.color = color
 
-$("#text-color-input").addEventListener("input", (e) => {
-    $(".meme-bottom-text").style.color = e.target.value
-})
+//Change text background
 
-$("#text-color-input").addEventListener("input", (e) => {
-    $("#text-color").innerText = e.target.value
-})
-
-//Change text background color 
-
-$("#back-color-input").addEventListener("input", (e) => {
-    $(".meme-top-text").style.backgroundColor = e.target.value
-})
-
-$("#back-color-input").addEventListener("input", (e) => {
-    $(".meme-bottom-text").style.backgroundColor = e.target.value
-})
-
-$("#background-text-color-options").addEventListener("input", (e) => {
-    $("#text-back-color").innerText = e.target.value
-})
-
-$("#no-back-check").addEventListener("input" , (e) => {
-    if (e.target.checked) {
-        $(".meme-top-text").style.backgroundColor = "transparent"
+const changeTextTransparency = (selector , evento) => {
+    if (evento) {
+        $(selector).style.backgroundColor = "transparent"
     } else {
-        $(".meme-top-text").style.backgroundColor = "#ffffff"
+        $(selector).style.backgroundColor = "#ffffff"
     }
-})
-
-$("#no-back-check").addEventListener("input" , (e) => {
-    if (e.target.checked) {
-        $(".meme-bottom-text").style.backgroundColor = "transparent"
-    } else {
-        $(".meme-bottom-text").style.backgroundColor = "#ffffff"
-    }
-})
+}
 
 //Change contour
 
-$(".contour-none").addEventListener ("click" , () => {
-    $(".meme-top-text").style.textShadow = "none"
-})
-
-$(".contour-light").addEventListener ("click" , () => {
-    $(".meme-top-text").style.textShadow = "#ffffff 2px 2px"
-})
-
-$(".contour-dark").addEventListener ("click" , () => {
-    $(".meme-top-text").style.textShadow = "#000000 2px 2px"
-})
-
-$(".contour-none").addEventListener ("click" , () => {
-    $(".meme-bottom-text").style.textShadow = "none"
-})
-
-$(".contour-light").addEventListener ("click" , () => {
-    $(".meme-bottom-text").style.textShadow = "#ffffff 2px 2px"
-})
-
-$(".contour-dark").addEventListener ("click" , () => {
-    $(".meme-bottom-text").style.textShadow = "#000000 2px 2px"
-})
+const changeContour = (selector , shadow) => $(selector).style.textShadow = shadow
 
 //Change space between text
 
-$("#space-between").addEventListener ("input" , (e) => {
-    $(".meme-top-text").style.padding = `${e.target.value}px 50px`
-})
-
-$("#space-between").addEventListener ("input" , (e) => {
-    $(".meme-bottom-text").style.padding = `${e.target.value}px 50px`
-})
+const changeTextPadding = (selector , padding) => $(selector).style.padding = `${padding}px 50px`
 
 //Change line height
 
-$("#line-height").addEventListener("input" , (e) => {
-    $(".meme-top-text").style.lineHeight = e.target.value
-})
-
-$("#line-height").addEventListener("input" , (e) => {
-    $(".meme-bottom-text").style.lineHeight = e.target.value
-})
+const changeLineHeight = (selector , height) => $(selector).style.lineHeight = height
 
 // ----- Download button ----- //
 
@@ -263,10 +152,8 @@ const downloadMeme = () => {
     })
 }
 
-$("#download-button").addEventListener("click", downloadMeme)
-
 const initializeProject = () => {
-    // ----- Eventos ----- //
+    // ----- EVENTOS ----- //
 
     // ----- Aside menu ----- //
 
@@ -321,6 +208,126 @@ const initializeProject = () => {
     $("#hue").addEventListener("input" , filtersMeme)
     $("#saturate").addEventListener("input" , filtersMeme)
     $("#invert").addEventListener("input" , filtersMeme)
+
+    $(".button-reset").addEventListener("click" , resetFilters) 
+
+    // ----- Meme Text ----- //
+
+    //Top Text
+
+    $("#top-text-input").addEventListener("input" , (e) => {
+        enterMemeText(".meme-top-text" ,e.target.value)
+    })
+
+    $("#no-top-text").addEventListener("input" , (e) => {
+        hideMemeText(".meme-top-text" , e.target.checked)
+    })
+
+    //Bottom text
+
+    $("#bottom-text-input").addEventListener("input" , (e) => {
+        enterMemeText(".meme-bottom-text" ,e.target.value)
+    })
+
+    $("#no-bottom-text").addEventListener("input" , (e) => {
+        hideMemeText(".meme-bottom-text" , e.target.checked)
+    })
+
+    // ----- Meme fonts ----- //
+
+    //Family
+
+    $("#font-family-selection").addEventListener("input" , (e) => {
+        changeFontFamily(".meme-top-text" , e.target.value)
+        changeFontFamily(".meme-bottom-text" , e.target.value)
+    })
+
+    //Size
+
+    $("#font-size-selector").addEventListener ("input" , (e) => {
+        changeFontSize(".meme-top-text" , e.target.value)
+        changeFontSize(".meme-bottom-text" , e.target.value)
+    })
+    
+    //Align
+
+    $("#align-left").addEventListener ("click" , () => {
+        changeTextAlign(".meme-top-text" , "left")
+        changeTextAlign(".meme-bottom-text" , "left")
+    })
+    
+    $("#align-center").addEventListener ("click" , () => {
+        changeTextAlign(".meme-top-text" , "center")
+        changeTextAlign(".meme-bottom-text" , "center")
+    })
+    
+    $("#align-right").addEventListener ("click" , () => {
+        changeTextAlign(".meme-top-text" , "right")
+        changeTextAlign(".meme-bottom-text" , "right")
+    })
+
+    //Text color - background
+
+    $("#text-color-input").addEventListener("input", (e) => {
+        changeColor(".meme-top-text" , e.target.value)
+        changeColor(".meme-bottom-text" , e.target.value)
+    })
+    
+    $("#text-color-input").addEventListener("input", (e) => {
+        colorValues("#text-color" , e.target.value)
+    })
+
+    $("#back-color-input").addEventListener("input", (e) => {
+        changeBackgroungColor(".meme-top-text" , e.target.value)
+        changeBackgroungColor(".meme-bottom-text" , e.target.value)
+    })
+
+    $("#background-text-color-options").addEventListener("input", (e) => {
+        changeColorValues("#text-back-color" , e.target.value)
+    })
+
+    $("#no-back-check").addEventListener("input" , (e) => {
+        changeTextTransparency(".meme-top-text" , e.target.checked)
+    })
+
+    //Contouring
+
+    $(".contour-none").addEventListener ("click" , () => {
+        changeContour(".meme-top-text" , "none")
+        changeContour(".meme-bottom-text" , "none")
+    })
+    
+    $(".contour-light").addEventListener ("click" , () => {
+        changeContour(".meme-top-text" , "#ffffff 2px 2px")
+        changeContour(".meme-bottom-text" , "#ffffff 2px 2px")
+    })
+    
+    $(".contour-dark").addEventListener ("click" , () => {
+        changeContour(".meme-top-text" , "#000000 2px 2px")
+        changeContour(".meme-bottom-text" , "#000000 2px 2px")
+    })
+
+    //Padding
+
+    $("#space-between").addEventListener ("input" , (e) => {
+        changeTextPadding(".meme-top-text" , e.target.value)
+        changeTextPadding(".meme-bottom-text" , e.target.value)
+    })
+
+    //Line height
+
+    $("#line-height").addEventListener("input" , (e) => {
+        changeLineHeight(".meme-top-text" , e.target.value)
+        changeLineHeight(".meme-bottom-text" , e.target.value)
+    })
+
+    //Download meme
+
+    $("#download-button").addEventListener("click", downloadMeme)
+
+    //Change Theme
+
+    $(".change-color-theme").addEventListener("click" , changeTheme)
 }
 
 window.addEventListener("load" , initializeProject)
