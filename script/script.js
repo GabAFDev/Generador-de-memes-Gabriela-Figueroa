@@ -2,29 +2,33 @@
 
 const $ = (selector) => document.querySelector(selector)
 
+// Aside panel
+
+const showPanel = () => {
+    $("aside").style.display = "block"
+}
+
 //Show image menu
 
-$(".open-image-menu").addEventListener("click" , () => {
-    $("aside").style.display = "block"
+const showImageSection = () => {
     $(".image-section").style.display = "block"
     $(".text-section").style.display = "none"
-})
+}
 
 //Show text menu
 
-$(".open-text-menu").addEventListener("click" , () => {
-    $("aside").style.display = "block"
+const showTextSection = () => {
     $(".text-section").style.display = "block"
     $(".image-section").style.display = "none"
-})
+}
 
 //Hide sidebar
 
-$(".close-menu").addEventListener("click" , () => {
+const hideAsideMenu = () => {
     $("aside").style.display = "none"
-})
+}
 
-//light-mode
+// Change theme
 
 $(".change-color-theme").addEventListener("click" , () => {
     const currentTheme = $("body").getAttribute("theme")
@@ -46,25 +50,21 @@ $(".change-color-theme").addEventListener("click" , () => {
 
 //Upload an image
 
-$("#url").addEventListener("input" , (e) => {
+const changeMemeImage = (e) => {
     $(".meme-image").style.backgroundImage = `url(${e.target.value})`
-})
+}
 
-//Background Color
+//Background Color functions 
 
-$(".input-color").addEventListener("input", (e) => {
-    $(".meme-image").style.backgroundColor = e.target.value
-})
+const changeBackgroungColor = (selector , color) => $(selector).style.backgroundColor = color
 
-$(".input-color").addEventListener("input", (e) => {
-    $("#input-color-value").innerText = e.target.value
-})
+// Show color values
+
+const colorValues = (selector , colorNames) => $(selector).innerText = colorNames
 
 //Background Blend
 
-$("#filters").addEventListener("input", (e) => {
-    $(".meme-image").style.backgroundBlendMode = e.target.value
-})
+const changeBackgroungBlend = (selector , filter) => $(selector).style.backgroundBlendMode = filter
 
 //Filters
 
@@ -72,19 +72,9 @@ const filtersMeme = () => {
     $(".meme-image").style.filter = `brightness(${$("#brightness").value}) opacity(${$("#opacity").value}) contrast(${$("#contrast").value}%) blur(${$("#blur").value}px) grayscale(${$("#grayscale").value}%) sepia(${$("#sepia").value}%) hue-rotate(${$("#hue").value}deg) saturate(${$("#saturate").value}%) invert(${$("#invert").value})`
 }
 
-$("#brightness").addEventListener("input" , filtersMeme)
-$("#opacity").addEventListener("input" , filtersMeme)
-$("#contrast").addEventListener("input" , filtersMeme)
-$("#blur").addEventListener("input" , filtersMeme)
-$("#grayscale").addEventListener("input" , filtersMeme)
-$("#sepia").addEventListener("input" , filtersMeme)
-$("#hue").addEventListener("input" , filtersMeme)
-$("#saturate").addEventListener("input" , filtersMeme)
-$("#invert").addEventListener("input" , filtersMeme)
-
 //Reset filters
 
-$(".button-reset").addEventListener("click" , (e) => {
+const resetFilters = () => {
     $("#brightness").value = "1"
     $("#opacity").value = "1"
     $("#contrast").value = "100"
@@ -95,7 +85,9 @@ $(".button-reset").addEventListener("click" , (e) => {
     $("#saturate").value = "100"
     $("#invert").value = "0"
     $(".meme-image").style.filter = "none"
-})
+}
+
+$(".button-reset").addEventListener("click" , resetFilters)
 
 // ----- Text panel ----- //
 
@@ -272,3 +264,63 @@ const downloadMeme = () => {
 }
 
 $("#download-button").addEventListener("click", downloadMeme)
+
+const initializeProject = () => {
+    // ----- Eventos ----- //
+
+    // ----- Aside menu ----- //
+
+    // Open aside menus
+
+    $(".open-image-menu").addEventListener("click" , () => {
+        showPanel()
+        showImageSection()
+    })
+
+    $(".open-text-menu").addEventListener("click" , () => {
+        showPanel()
+        showTextSection()
+    })
+
+    // Close aside menus
+
+    $(".close-menu").addEventListener("click" , () => {
+        hideAsideMenu()
+    })
+
+    // -----Meme image-----//
+
+    $("#url").addEventListener("input" , changeMemeImage)
+
+    // -----Meme background-----//
+    
+    //Color
+
+    $(".input-color").addEventListener("input", (e) => {
+        changeBackgroungColor(".meme-image" , e.target.value)
+    })
+
+    $(".input-color").addEventListener("input", (e) => {
+        colorValues("#input-color-value" , e.target.value)
+    })
+
+    //Blend
+
+    $("#filters").addEventListener("input", (e) => {
+        changeBackgroungBlend(".meme-image" , e.target.value)
+    })
+
+    //-----Image Filters-----//
+
+    $("#brightness").addEventListener("input" , filtersMeme)
+    $("#opacity").addEventListener("input" , filtersMeme)
+    $("#contrast").addEventListener("input" , filtersMeme)
+    $("#blur").addEventListener("input" , filtersMeme)
+    $("#grayscale").addEventListener("input" , filtersMeme)
+    $("#sepia").addEventListener("input" , filtersMeme)
+    $("#hue").addEventListener("input" , filtersMeme)
+    $("#saturate").addEventListener("input" , filtersMeme)
+    $("#invert").addEventListener("input" , filtersMeme)
+}
+
+window.addEventListener("load" , initializeProject)
