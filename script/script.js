@@ -283,7 +283,7 @@ const initializeProject = () => {
     })
 
     $("#background-text-color-options").addEventListener("input", (e) => {
-        changeColorValues("#text-back-color" , e.target.value)
+        colorValues("#text-back-color" , e.target.value)
     })
 
     $("#no-back-check").addEventListener("input" , (e) => {
