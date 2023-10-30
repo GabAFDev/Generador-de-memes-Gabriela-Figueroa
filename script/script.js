@@ -288,6 +288,7 @@ const initializeProject = () => {
 
     $("#no-back-check").addEventListener("input" , (e) => {
         changeTextTransparency(".meme-top-text" , e.target.checked)
+        changeTextTransparency(".meme-bottom-text" , e.target.checked)
     })
 
     //Contouring
